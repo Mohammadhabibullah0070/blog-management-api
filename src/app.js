@@ -15,9 +15,8 @@ app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 app.use("/api/auth", authRoutes);
 app.use("/api/blogs", blogRoutes);
 
-app.get("/", (req, res) => res.send("Blog Management API is running ✅"));
+app.get("/", (req, res) => res.send("Blog Management API is running!"));
 
-// 404 handler
 app.use((req, res) => {
   res.status(404).json({ message: "Route not found" });
 });
